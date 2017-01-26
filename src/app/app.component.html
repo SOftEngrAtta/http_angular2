@@ -1,0 +1,17 @@
+<!--<ul class="nav nav-pills">
+      <li [class.active]= "viewMode == 'map'" [style.cursor]='pointer'><a (click)="viewMode = 'map'">Map View</a></li>
+      <li [class.active]= "viewMode == 'list'"><a (click)="viewMode = 'list'">Map View</a></li>      
+    </ul> 
+    <div [ngSwitch]="viewMode">
+      <h1 *ngSwitchCase="'map'">Map View Content</h1>
+      <h1 *ngSwitchCase="'list'">List View Content</h1>    
+    </div> -->
+
+<p>
+  {{ title }}  
+</p>   
+<button (click)="getPatientListFunction()">Get Patient List</button> 
+
+<li *ngFor="let user of usersArray">
+  <img *ngIf="(user.image_path != 'url')" [src]=" user.image_path" alt="" width="200" height="200">
+</li>
